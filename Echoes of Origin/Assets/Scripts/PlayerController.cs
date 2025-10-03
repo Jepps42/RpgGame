@@ -24,9 +24,11 @@ public class PlayerController : MonoBehaviour
         None = 0,
         Idle = 1,
         Walking = 2,
-        Jumping = 3,
-        Blocking = 4,
-        Stunned = 5
+        Running = 3,
+        Jumping = 4,
+        Attacking = 5,
+        Blocking = 6,
+        Stunned = 7
     }
 
     // Update is called once per frame
@@ -65,9 +67,19 @@ public class PlayerController : MonoBehaviour
                     //Code for walking animation - JE
                     break;
                 }
+            case PlayerState.Running:
+                {
+                    //Code for running animation - JE
+                    break;
+                }
             case PlayerState.Jumping:
                 {
                     //Code for jumping animation - JE
+                    break;
+                }
+            case PlayerState.Attacking:
+                {
+                    //Code for attack animations - JE
                     break;
                 }
             case PlayerState.Blocking:
