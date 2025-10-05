@@ -9,12 +9,24 @@ public class PlayerController : MonoBehaviour
 
     public PlayerState State = PlayerState.Idle;
 
+    private Animator Anim; 
 
     private float Speed = 8;
+
+    public float Bounce = 7;
+
+    //Until my floor is made, this will be commented out - JE
+    //public bool isGrounded = true;
+
+    public bool isSprinting = false;
+
+    public bool FacingLeft = false;
+
+    public bool FacingRight = false;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Anim = GetComponent<Animator>();
     }
 
 
@@ -39,6 +51,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             vel.x = -Speed;
+            FacingLeft = true;
         }
         if (Input.GetKey(KeyCode.S))
         {
@@ -47,6 +60,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             vel.x = Speed;
+            FacingRight = true;
         }
         if (Input.GetKey(KeyCode.W))
         {
@@ -60,11 +74,13 @@ public class PlayerController : MonoBehaviour
             case PlayerState.Idle:
                 {
                     //Code for idle animation state - JE
+                    Anim.Play("Idle");
                     break;
                 }
             case PlayerState.Walking:
                 {
                     //Code for walking animation - JE
+                    Anim.Play("Walking");
                     break;
                 }
             case PlayerState.Running:
