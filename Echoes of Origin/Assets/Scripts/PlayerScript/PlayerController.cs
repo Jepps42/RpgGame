@@ -18,11 +18,9 @@ public class PlayerController : MonoBehaviour
     //Until my floor is made, this will be commented out - JE
     //public bool isGrounded = true;
 
-    public bool isSprinting = false;
+    //Dont need to face left if no enemies are there - JE
+    //public bool FacingLeft = false;
 
-    public bool FacingLeft = false;
-
-    public bool FacingRight = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,27 +45,51 @@ public class PlayerController : MonoBehaviour
     //Alternative method of player movement rather than transform - JE
     void Update()
     {
+        PlayerState state = PlayerState.Idle;
         Vector2 vel = new Vector2(0, 0);
         if (Input.GetKey(KeyCode.A))
         {
             vel.x = -Speed;
-            FacingLeft = true;
+            state = PlayerState.Walking;
         }
         if (Input.GetKey(KeyCode.S))
         {
             vel.y = -Speed;
+            state = PlayerState.Walking;
+        }
+        if(Input.GetKey(KeyCode.W)) 
+        {
+            vel.y = Speed;
+            state = PlayerState.Walking;
         }
         if (Input.GetKey(KeyCode.D))
         {
             vel.x = Speed;
-            FacingRight = true;
+            state = PlayerState.Walking;
         }
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.LeftShift)) 
         {
-            vel.y = Speed;
+            vel.x += Speed;
+            state = PlayerState.Running;
         }
-
+        if (Input.GetKey(KeyCode.E)) 
+        {
+            
+            state = PlayerState.Attacking;
+        }
+        /*if (Input.GetKey(KeyCode.Space)) 
+        {
+            state = PlayerState.Jumping;
+        }*/ //Dont need jumping now - JE
+        if (Input.GetKey(KeyCode.F)) 
+        {
+            state = PlayerState.Blocking;
+        }
+        
         RB.velocity = vel;
+
+        State = state;
+
 
         switch (State)
         {
@@ -86,26 +108,31 @@ public class PlayerController : MonoBehaviour
             case PlayerState.Running:
                 {
                     //Code for running animation - JE
+                    Anim.Play("Running");
                     break;
                 }
             case PlayerState.Jumping:
                 {
                     //Code for jumping animation - JE
+                    Anim.Play("Jumping");
                     break;
                 }
             case PlayerState.Attacking:
                 {
                     //Code for attack animations - JE
+                    Anim.Play("Attacking");
                     break;
                 }
             case PlayerState.Blocking:
                 {
                     //Code for blocking animation - JE
+                    Anim.Play("Blocking");
                     break;
                 }
             case PlayerState.Stunned: 
                 {
                     //Code for stunned animation state - JE
+                    Anim.Play("Stunned");
                     break;
                 }
         }
