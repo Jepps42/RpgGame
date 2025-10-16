@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
 
     public PlayerState State = PlayerState.Idle;
 
-    private Animator Anim; 
+    private Animator Anim;
 
     private float Speed = 8;
 
@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
             vel.y = -Speed;
             state = PlayerState.Walking;
         }
-        if(Input.GetKey(KeyCode.W)) 
+        if (Input.GetKey(KeyCode.W))
         {
             vel.y = Speed;
             state = PlayerState.Walking;
@@ -67,25 +67,25 @@ public class PlayerController : MonoBehaviour
             vel.x = Speed;
             state = PlayerState.Walking;
         }
-        if (Input.GetKey(KeyCode.LeftShift)) 
+        if (Input.GetKey(KeyCode.LeftShift))
         {
             vel.x += Speed;
             state = PlayerState.Running;
         }
-        if (Input.GetKey(KeyCode.E)) 
+        if (Input.GetKey(KeyCode.E))
         {
-            
+
             state = PlayerState.Attacking;
         }
         /*if (Input.GetKey(KeyCode.Space)) 
         {
             state = PlayerState.Jumping;
         }*/ //Dont need jumping now - JE
-        if (Input.GetKey(KeyCode.F)) 
+        if (Input.GetKey(KeyCode.F))
         {
             state = PlayerState.Blocking;
         }
-        
+
         RB.velocity = vel;
 
         State = state;
@@ -129,7 +129,7 @@ public class PlayerController : MonoBehaviour
                     Anim.Play("Blocking");
                     break;
                 }
-            case PlayerState.Stunned: 
+            case PlayerState.Stunned:
                 {
                     //Code for stunned animation state - JE
                     Anim.Play("Stunned");

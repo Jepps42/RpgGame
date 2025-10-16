@@ -7,17 +7,16 @@ public class GoblinController : MonoBehaviour
 
     public Rigidbody2D Rb;
 
+    public int health;
 
-    public float GobsMaxHealth = 5;
+    public int GobsMaxHealth = 10;
 
     public float GoblinSpeed = 6;
-
-    public GoblinHealth heatlh;
 
     private void Awake()
     {
         Rb = GetComponent<Rigidbody2D>();
-        heatlh = GetComponentInChildren<GoblinHealth>();
+        health = GobsMaxHealth;
     }
 
     // Start is called before the first frame update
@@ -30,5 +29,15 @@ public class GoblinController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void DamageTaken(int PlayerDamage)
+    {
+        health -= PlayerDamage;
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

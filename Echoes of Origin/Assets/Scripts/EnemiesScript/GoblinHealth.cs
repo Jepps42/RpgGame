@@ -8,7 +8,6 @@ public class GoblinHealth : MonoBehaviour
     //Prioritize goblin script, health and player attacking - JE
     private Slider HealthBar;
 
-
     public void UpdateHealthBar(float currentValue, float maxValue)
     {
         HealthBar.value = currentValue / maxValue;
