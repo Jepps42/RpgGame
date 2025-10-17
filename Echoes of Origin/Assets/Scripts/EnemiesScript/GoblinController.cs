@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class GoblinController : MonoBehaviour
 {
+    public Slider slider;
 
     public Rigidbody2D Rb;
 
@@ -13,16 +16,13 @@ public class GoblinController : MonoBehaviour
 
     public float GoblinSpeed = 6;
 
-    private void Awake()
-    {
-        Rb = GetComponent<Rigidbody2D>();
-        health = GobsMaxHealth;
-    }
-
     // Start is called before the first frame update
     void Start()
     {
-        
+        Rb = GetComponent<Rigidbody2D>();
+        health = GobsMaxHealth;
+        slider.maxValue = GobsMaxHealth;
+        slider.value = health;
     }
 
     // Update is called once per frame
@@ -34,6 +34,7 @@ public class GoblinController : MonoBehaviour
     public void DamageTaken(int PlayerDamage)
     {
         health -= PlayerDamage;
+        slider.value = health;
 
         if (health <= 0)
         {

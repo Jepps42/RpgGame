@@ -612,6 +612,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1433183848}
   - component: {fileID: 1433183849}
+  - component: {fileID: 1433183850}
   m_Layer: 0
   m_Name: FloorLvl
   m_TagString: Untagged
@@ -686,6 +687,64 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!68 &1433183850
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433183847}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -250.21463, y: -5.3658047}
+  - {x: 3.1670675, y: -5.974783}
+  - {x: 250.21463, y: -5.580435}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!114 &1605420125 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4247647478995332835, guid: 918203a9cc6e42548b2f96dac800cdf5, type: 3}
+  m_PrefabInstance: {fileID: 1993025101}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cd540f16ee8da84ebbce7d8b6767060, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &1605420126 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 2735796472733627948, guid: 918203a9cc6e42548b2f96dac800cdf5, type: 3}
+  m_PrefabInstance: {fileID: 1993025101}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1627606665
 GameObject:
   m_ObjectHideFlags: 3
@@ -782,6 +841,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 134877662007091033, guid: 918203a9cc6e42548b2f96dac800cdf5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 134877662007091033, guid: 918203a9cc6e42548b2f96dac800cdf5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 601157823492263240, guid: 918203a9cc6e42548b2f96dac800cdf5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -822,8 +889,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2735796472733627948, guid: 918203a9cc6e42548b2f96dac800cdf5, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2735796472733627948, guid: 918203a9cc6e42548b2f96dac800cdf5, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247647478995332835, guid: 918203a9cc6e42548b2f96dac800cdf5, type: 3}
+      propertyPath: Rb
+      value: 
+      objectReference: {fileID: 1605420126}
     - target: {fileID: 5878073029795446935, guid: 918203a9cc6e42548b2f96dac800cdf5, type: 3}
       propertyPath: m_Name
+      value: Goblin
+      objectReference: {fileID: 0}
+    - target: {fileID: 5878073029795446935, guid: 918203a9cc6e42548b2f96dac800cdf5, type: 3}
+      propertyPath: m_TagString
       value: Goblin
       objectReference: {fileID: 0}
     - target: {fileID: 6633168537332445634, guid: 918203a9cc6e42548b2f96dac800cdf5, type: 3}
@@ -837,6 +920,10 @@ PrefabInstance:
     - target: {fileID: 6633168537332445634, guid: 918203a9cc6e42548b2f96dac800cdf5, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7806117876842500451, guid: 918203a9cc6e42548b2f96dac800cdf5, type: 3}
+      propertyPath: m_Value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9062199963349777548, guid: 918203a9cc6e42548b2f96dac800cdf5, type: 3}
       propertyPath: m_AnchorMax.x
@@ -866,6 +953,10 @@ PrefabInstance:
     - target: {fileID: 4523539717726357566, guid: 86800d007e065224e95b8dbb8e307695, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4677509329430218192, guid: 86800d007e065224e95b8dbb8e307695, type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7054175656463204558, guid: 86800d007e065224e95b8dbb8e307695, type: 3}
       propertyPath: m_LocalPosition.x
@@ -906,6 +997,14 @@ PrefabInstance:
     - target: {fileID: 7054175656463204558, guid: 86800d007e065224e95b8dbb8e307695, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7486743158700872912, guid: 86800d007e065224e95b8dbb8e307695, type: 3}
+      propertyPath: GobsHealth
+      value: 
+      objectReference: {fileID: 1605420125}
+    - target: {fileID: 7486743158700872912, guid: 86800d007e065224e95b8dbb8e307695, type: 3}
+      propertyPath: PlayerDamage
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

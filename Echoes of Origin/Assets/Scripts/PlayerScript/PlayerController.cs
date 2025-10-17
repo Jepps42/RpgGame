@@ -15,6 +15,13 @@ public class PlayerController : MonoBehaviour
 
     public float Bounce = 7;
 
+    public int PlayerHealth;
+
+    public int PlayerMaxHealth = 10;
+
+    public int PlayerDamage = 3;
+
+    public GoblinController GobsHealth;
     //Until my floor is made, this will be commented out - JE
     //public bool isGrounded = true;
 
@@ -135,6 +142,24 @@ public class PlayerController : MonoBehaviour
                     Anim.Play("Stunned");
                     break;
                 }
+        }
+    }
+
+    public void TakeDamage(int damage) 
+    {
+        PlayerHealth -= damage;
+
+        if (PlayerHealth <= 0) 
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Goblin")
+        {
+            GobsHealth.DamageTaken(PlayerDamage);
         }
     }
 }
