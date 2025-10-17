@@ -729,22 +729,22 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!114 &1605420125 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4247647478995332835, guid: 918203a9cc6e42548b2f96dac800cdf5, type: 3}
-  m_PrefabInstance: {fileID: 1993025101}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cd540f16ee8da84ebbce7d8b6767060, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &1605420126 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 2735796472733627948, guid: 918203a9cc6e42548b2f96dac800cdf5, type: 3}
   m_PrefabInstance: {fileID: 1993025101}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1605420131 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5983589512623059691, guid: 918203a9cc6e42548b2f96dac800cdf5, type: 3}
+  m_PrefabInstance: {fileID: 1993025101}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c45a5c45bdc089d4b87ce6278ae99d8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1627606665
 GameObject:
   m_ObjectHideFlags: 3
@@ -1001,7 +1001,7 @@ PrefabInstance:
     - target: {fileID: 7486743158700872912, guid: 86800d007e065224e95b8dbb8e307695, type: 3}
       propertyPath: GobsHealth
       value: 
-      objectReference: {fileID: 1605420125}
+      objectReference: {fileID: 1605420131}
     - target: {fileID: 7486743158700872912, guid: 86800d007e065224e95b8dbb8e307695, type: 3}
       propertyPath: PlayerDamage
       value: 3
