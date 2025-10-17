@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
 
     public int PlayerDamage = 3;
 
-    public GoblinController GobsHealth;
+    public GoblinHealth GobsHealth;
     //Until my floor is made, this will be commented out - JE
     //public bool isGrounded = true;
 
