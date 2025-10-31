@@ -512,8 +512,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd540f16ee8da84ebbce7d8b6767060, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 0}
   Rb: {fileID: 2735796472733627948}
-  GoblinSpeed: 6
+  GoblinSpeed: 4.5
   enemyState: 0
 --- !u!61 &2911055208212704317
 BoxCollider2D:

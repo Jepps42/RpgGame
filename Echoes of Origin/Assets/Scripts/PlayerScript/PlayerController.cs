@@ -15,10 +15,6 @@ public class PlayerController : MonoBehaviour
 
     public float Bounce = 7;
 
-    public int PlayerHealth;
-
-    public int PlayerMaxHealth = 10;
-
     public int PlayerDamage = 3;
 
     public GoblinHealth GobsHealth;
@@ -145,15 +141,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage) 
-    {
-        PlayerHealth -= damage;
-
-        if (PlayerHealth <= 0) 
-        {
-            Destroy(gameObject);
-        }
-    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

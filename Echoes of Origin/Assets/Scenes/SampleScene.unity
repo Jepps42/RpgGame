@@ -602,6 +602,22 @@ Transform:
   - {fileID: 822869600}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1137100499 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4523539717726357566, guid: 86800d007e065224e95b8dbb8e307695, type: 3}
+  m_PrefabInstance: {fileID: 8044423764810858455}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1137100505 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3918961266429118352, guid: 86800d007e065224e95b8dbb8e307695, type: 3}
+  m_PrefabInstance: {fileID: 8044423764810858455}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137100499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16222dfef0607284595057e0a6dd4e9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1433183847
 GameObject:
   m_ObjectHideFlags: 0
@@ -833,6 +849,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1654522781 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3676091303798741668, guid: 86800d007e065224e95b8dbb8e307695, type: 3}
+  m_PrefabInstance: {fileID: 8044423764810858455}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1993025101
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -901,6 +928,14 @@ PrefabInstance:
       propertyPath: Rb
       value: 
       objectReference: {fileID: 1605420126}
+    - target: {fileID: 4247647478995332835, guid: 918203a9cc6e42548b2f96dac800cdf5, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1137100499}
+    - target: {fileID: 4247647478995332835, guid: 918203a9cc6e42548b2f96dac800cdf5, type: 3}
+      propertyPath: PlayerHealth
+      value: 
+      objectReference: {fileID: 1137100505}
     - target: {fileID: 5878073029795446935, guid: 918203a9cc6e42548b2f96dac800cdf5, type: 3}
       propertyPath: m_Name
       value: Goblin
@@ -950,13 +985,41 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 494361410631554810, guid: 86800d007e065224e95b8dbb8e307695, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 494361410631554810, guid: 86800d007e065224e95b8dbb8e307695, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 519484021655767303, guid: 86800d007e065224e95b8dbb8e307695, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1267486630687877208, guid: 86800d007e065224e95b8dbb8e307695, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3918961266429118352, guid: 86800d007e065224e95b8dbb8e307695, type: 3}
+      propertyPath: PlayerUIHealth
+      value: 
+      objectReference: {fileID: 1654522781}
     - target: {fileID: 4523539717726357566, guid: 86800d007e065224e95b8dbb8e307695, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523539717726357566, guid: 86800d007e065224e95b8dbb8e307695, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4677509329430218192, guid: 86800d007e065224e95b8dbb8e307695, type: 3}
       propertyPath: m_Constraints
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6704647988820796313, guid: 86800d007e065224e95b8dbb8e307695, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7054175656463204558, guid: 86800d007e065224e95b8dbb8e307695, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1005,6 +1068,10 @@ PrefabInstance:
     - target: {fileID: 7486743158700872912, guid: 86800d007e065224e95b8dbb8e307695, type: 3}
       propertyPath: PlayerDamage
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8804816998083049509, guid: 86800d007e065224e95b8dbb8e307695, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

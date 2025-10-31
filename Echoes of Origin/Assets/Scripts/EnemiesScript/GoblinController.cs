@@ -6,14 +6,21 @@ using UnityEngine.UI;
 
 public class GoblinController : MonoBehaviour
 {
+    public GameObject Player;
 
     public Rigidbody2D Rb;
 
-    public float GoblinSpeed = 6;
+    public float GoblinSpeed;
+
+    public int GoblinDamage = 1;
 
     public EnemyState enemyState = EnemyState.Idle;
 
     private Animator EnemyAnim;
+
+    private float distance;
+
+    public PlayerHealth PlayerHealth;
     public enum EnemyState
     {
         Idle = 0,
@@ -33,6 +40,11 @@ public class GoblinController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        distance = Vector2.Distance(transform.position, Player.transform.position);
+        Vector2 direction = Player.transform.position - transform.position;
+
+        transform.position = Vector2.MoveTowards(this.transform.position, Player.transform.position, GoblinSpeed * Time.deltaTime);
+
         if(enemyState == EnemyState.Dead)
         {
             return;
@@ -40,6 +52,7 @@ public class GoblinController : MonoBehaviour
 
         EnemyState tempState = EnemyState.Idle;
         EnemyStates(tempState);
+
 
     }
 
@@ -65,6 +78,14 @@ public class GoblinController : MonoBehaviour
             case EnemyState.Dead:
                 EnemyAnim.Play("Death");
                 break;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            PlayerHealth.TakeDamage(GoblinDamage);
         }
     }
 }
